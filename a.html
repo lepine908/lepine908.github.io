@@ -1,1 +1,55 @@
-<p>test</p>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Code secret</title>
+    <style>
+        .hidden { display: none; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Entrez le code secret :</h2>
+
+    <input type="text" id="champCode" placeholder="Entrez le code ici">
+    <button onclick="verifierCode()">Valider</button>
+
+    <p id="monParagraphe" class="hidden">
+        <a href="https://www.example.com" target="_blank">
+            <button>Accéder au site</button>
+        </a>
+    </p>
+
+    <p id="message"></p>
+
+    <script>
+        function verifierCode() {
+            const codeCorrect = "1234"; // ton code secret
+            const champ = document.getElementById("champCode");
+            const texteSaisi = champ.value;
+            const paragraphe = document.getElementById("monParagraphe");
+            const message = document.getElementById("message");
+
+            if (texteSaisi === codeCorrect) {
+                paragraphe.classList.remove("hidden"); // montrer le bouton
+                message.textContent = "Code correct ! 🎉";
+                message.style.color = "green";
+            } else {
+                message.textContent = "Code incorrect, essayez encore ! ❌";
+                message.style.color = "red";
+                paragraphe.classList.add("hidden"); // cacher le bouton si code incorrect
+            }
+
+            champ.value = ""; // vider le champ
+        }
+    </script>
+</body>
+</html>
