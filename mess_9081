@@ -1,0 +1,49 @@
+bonjour, membre de 908 studios, si tu reçois ça, c'est que tu es un scratcheur et que nous avons besoin de ton aide pour un projet Scratch/turbowarp.
+Ce message s'adresse principalement à Nokodraj et Adrocode par lepine908.
+Je m'explique:
+Je lance cette mobilisation générale car j'ai il y a peu commencé un projet : Supiano908.  STOP!! je sais ce que tu vas dire: c'est nul je m'en fiche.
+Mais s'il et plait continue de lire tu verras je m'explique:
+à l'occasion de mes trois mois de travail acharné sur Scratch,je fus devenu 
+Scratcheur!
+Cela signifie: je peux faire pleins de nouvelles choses comme créer 
+des studios mais aussi et surtout :
+Les fameuses et très convoitées: VARIABLES CLOUD!
+Cela faisait tant de temps que je m'impatientais à les utiliser pour
+créer des jeux en ligne et maintenant c'était possible!
+Je cherchais une idée pour mettre en scène ces variables cloud jusqu'à
+que chatGPT me donnai une idée: un piano virtuel interactif.
+C'est ainsi que m'est venu l'idée de Supiano908.
+Si vous ne savez pas exactement de quoi il s'agit, rendez-vous ici: 
+https://lepine908.github.io/supiano.html , vous pourrez jouer en ligne au jeu 
+mais pour l'instant, aucune fonctionnalitées ne sont présentes.Seul la 
+cinématique est créée.Après avoir créé la cinématique, je m'attaquais à
+créer le système de comptes/connexions mais: après de longues minutes de
+réfléxions, impossible d'utiliser ces maudites variables pour mettre en 
+fonctionnement le système: il faudrait soit des listes cloud dynamiques
+soit un système de création de variables dynamique. C'est là qu'une idée
+me vint: TurboWarp(turbowarp.org)
+Il s'agit d'un mod scratch qui compile vers javascript pour éxécuter en 60 
+FPS! Il permet aussi apparement de stocker des caractères dans les variables 
+cloud et de créer sa propre extension javascript.Tout ça grâce à 
+l'open-sourcing! il peut lire les fichiers .sb3 et peut se connecter au site
+web de scratch pour les jeux publiques ce qui permet de faire tourner des
+jeux scratch avec toutes ces fonctionnalités et cerise sur le gateau: le 
+packager turbowarp permet de transformer un jeu en html, autrement dit:
+une page web autonome.Donc turbowarp est vraiment conçu pour les projets 
+sérieux (les jeux turbowarp ressemblent à de vrais jeux!)tandis que 
+scratch est plutôt pour l'apprentissage et l'éducation.
+J'importe mon .sb3 sur turbowarp et demande à chatgpt de m'aider
+le projet est trop difficile pour lui, il n'y arrive pas et nous décidons 
+d'abandonner les varaibles cloud, ce n'est vraiment pas fait pour ca...
+Puis une autre idée me vint, toujours avec Turbowarp.
+Utiliser l'extension turbowarp http pour communiquer avec une base de données Javascript object notation hébergée sur github pages qui
+stockera les données des comptes. Après beaucoup de travail, le triste véritée est que : github pages n'autorise pas l'écriture sur fichiers
+sauf avec clé api mais il faudrait la stocker dans le jeu ce qui est très dangereux car n'importe qui peut détruire la base de données
+La seule solution à présent : créer une extension javascript pour turbowarp qui permet de créer des listes cloud et les stocke sur NOTRE serveur.
+Mais ça risque d'etre très difficile et c'est pour cela que j'ai besoin de : 
+Adrocode : pour le javascript
+Nokodraj : pour le code scratch
+moi (lepine908): pour le reste 
+Afin que nous puissions terminer le jeu, voila votre mission:
+rendez vous sur https://lepine908.github.io/supiano.html pour plus d'infos puis dans espace dévellopeur.
+bonne chance ! je vous enverrai bientôt un message pour plus d'infos .
