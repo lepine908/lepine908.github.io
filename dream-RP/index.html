@@ -1,10 +1,30 @@
 <style>
 body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fond flou derrière */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('https://lepine908.github.io/Logo%20Dream-RP%20sous%20les%20néons%20nocturnes.png');
-    background-size: cover;        /* L'image remplit tout l'écran */
-    background-position: center;   /* Centrée */
-    background-repeat: no-repeat;  /* Pas de répétition */
-    height: 100vh;                 /* Hauteur = écran */
-    margin: 0;                     /* Supprime les marges */
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+/* Image principale nette */
+body {
+    background-image: url('https://lepine908.github.io/Logo%20Dream-RP%20sous%20les%20néons%20nocturnes.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 </style>
