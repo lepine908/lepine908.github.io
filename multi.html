@@ -1,5 +1,137 @@
-<title>Our MultiCraft Server </title>
-<h1 style = "color:red"> OUR MULTICRAFT SERVER </h1>
-Download multicraft at <a href = "https://multicraft.world/downloads"> here </a>
-And then write the code : 2NRGNQWH
-More informations in our discord server and in the multicraft server
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our MultiCraft Server</title>
+    <style>
+      :root {
+        --bg1: #07152b;
+        --bg2: #12335c;
+        --card: rgba(255,255,255,0.08);
+        --border: rgba(255,255,255,0.18);
+        --text: #f3f8ff;
+        --muted: #bdd0ea;
+        --red: #ff5f6d;
+        --blue: #5ec8ff;
+        --green: #5df0a5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(94, 200, 255, 0.2), transparent 28%),
+          radial-gradient(circle at bottom right, rgba(93, 240, 165, 0.15), transparent 28%),
+          linear-gradient(135deg, var(--bg1), var(--bg2));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .card {
+        max-width: 720px;
+        width: 100%;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 32px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        color: var(--red);
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: 1px;
+      }
+
+      p {
+        margin: 12px 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.5;
+      }
+
+      .download {
+        display: inline-block;
+        margin: 18px 0 10px;
+        padding: 14px 22px;
+        border-radius: 14px;
+        text-decoration: none;
+        background: var(--blue);
+        color: #04111d;
+        font-weight: bold;
+        transition: transform 0.15s ease, filter 0.15s ease;
+      }
+
+      .download:hover {
+        transform: scale(1.03);
+        filter: brightness(1.05);
+      }
+
+      .code-box {
+        margin: 22px auto;
+        max-width: 320px;
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 16px;
+        padding: 18px;
+      }
+
+      .label {
+        font-size: 0.95rem;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .code {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--green);
+        letter-spacing: 3px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 0.98rem;
+      }
+
+      .footer a {
+        color: var(--text);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.35);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>OUR MULTICRAFT SERVER</h1>
+
+      <p>Download MultiCraft using the official link below.</p>
+
+      <a class="download" href="https://multicraft.world/downloads">Download MultiCraft</a>
+
+      <div class="code-box">
+        <div class="label">Server code</div>
+        <div class="code">2NRGNQWH</div>
+      </div>
+
+      <p>And then write the code above to access the server.</p>
+      <p>More informations in our Discord server and in the MultiCraft server.</p>
+
+      <p class="footer">
+        <a href="https://lepine908.github.io/contact.html">Back to community and contact</a>
+      </p>
+    </div>
+  </body>
+  </html>
