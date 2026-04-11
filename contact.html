@@ -1,8 +1,187 @@
-<h1> Communauté 908 et contact </h1>
-<a href = "https://docs.google.com/forms/d/e/1FAIpQLScGuKyFguycoQYRvR2qQ6ufwMB91sXvdKe-_o2u6EgfFAsVuQ/viewform?usp=publish-editor"><button>DEVENIR DÉVELOPPEUR 908</button></a>
-<a href = "https://lepine908.github.io/multi.html"><button style = "color:blue">SERVEUR MULTICRAFT</button></a>
-<a href = "https://lepine908.github.io/b.html"><button>Communauté paroles908</button></a>
-<a href = "mailto://lepilyes@gmail.com"><button>Contacter par email: lepilyes@gmail.com</button></a>
-<a href = "https://scratch.mit.edu/studios/51138291"><button> studio Scratch</button></a>
-<a href = "https://www.roblox.com/fr/users/4721239152"><button style = "color:grey">lepine908 sur ROBLOX(lepine908 est le représetant de 908 studios sur Roblox)</button></a>
-  <a href = "https://discord.gg/CZ6e4Zbs"><button style = "color:blue">SERVEUR DISCORD OFFICIEL</button></a>
+ <!DOCTYPE html>
+  <html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communauté 908 et contact</title>
+    <style>
+      :root {
+        --bg-1: #06142b;
+        --bg-2: #0c2d57;
+        --card: rgba(255, 255, 255, 0.08);
+        --card-border: rgba(255, 255, 255, 0.16);
+        --text: #f4f8ff;
+        --muted: #b7c8e6;
+        --blue: #4db6ff;
+        --green: #55e6a5;
+        --orange: #ffb14d;
+        --red: #ff6b6b;
+        --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(77, 182, 255, 0.22), transparent 30%),
+          radial-gradient(circle at bottom right, rgba(85, 230, 165, 0.18), transparent 28%),
+          linear-gradient(135deg, var(--bg-1), var(--bg-2));
+        padding: 40px 20px;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      .hero h1 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        letter-spacing: 1px;
+        text-shadow: 0 0 20px rgba(77, 182, 255, 0.25);
+      }
+
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 22px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.11);
+      }
+
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 1.15rem;
+      }
+
+      .card p {
+        margin: 0 0 16px;
+        color: var(--muted);
+        line-height: 1.45;
+        min-height: 44px;
+      }
+
+      .btn {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #04101f;
+        font-weight: bold;
+        padding: 14px 16px;
+        border-radius: 14px;
+        transition: transform 0.15s ease, filter 0.15s ease;
+      }
+
+      .btn:hover {
+        transform: scale(1.02);
+        filter: brightness(1.05);
+      }
+
+      .blue { background: var(--blue); }
+      .green { background: var(--green); }
+      .orange { background: var(--orange); }
+      .red { background: var(--red); color: white; }
+
+      .footer-link {
+        text-align: center;
+        margin-top: 26px;
+      }
+
+      .footer-link a {
+        color: var(--text);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.35);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="hero">
+        <h1>Communauté 908 et contact</h1>
+        <p>Rejoignez l’univers 908 Studios, contactez l’équipe et accédez à nos espaces officiels.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h2>Devenir développeur 908</h2>
+          <p>Formulaire officiel pour rejoindre l’équipe et participer aux projets 908 Studios.</p>
+          <a class="btn green" href="https://docs.google.com/forms/d/e/1FAIpQLScGuKyFguycoQYRvR2qQ6ufwMB91sXvdKe-_o2u6EgfFAsVuQ/viewform?usp=publish-editor">Ouvrir le
+  formulaire</a>
+        </div>
+
+        <div class="card">
+          <h2>Serveur MultiCraft</h2>
+          <p>Accédez aux informations de connexion et à l’espace de jeu associé.</p>
+          <a class="btn blue" href="https://lepine908.github.io/multi.html">Voir le serveur</a>
+        </div>
+
+        <div class="card">
+          <h2>Communauté Paroles908</h2>
+          <p>Retrouvez la partie communauté liée au projet Paroles 908.</p>
+          <a class="btn orange" href="https://lepine908.github.io/b.html">Accéder à la communauté</a>
+        </div>
+
+        <div class="card">
+          <h2>Contact email</h2>
+          <p>Contact direct par email pour échanger avec 908 Studios.</p>
+          <a class="btn red" href="mailto:lepilyes@gmail.com">lepilyes@gmail.com</a>
+        </div>
+
+        <div class="card">
+          <h2>Studio Scratch</h2>
+          <p>Le studio Scratch officiel où sont regroupés plusieurs projets 908.</p>
+          <a class="btn blue" href="https://scratch.mit.edu/studios/51138291">Ouvrir le studio Scratch</a>
+        </div>
+
+        <div class="card">
+          <h2>908 sur Roblox</h2>
+          <p>Compte Roblox représentant 908 Studios sur la plateforme.</p>
+          <a class="btn green" href="https://www.roblox.com/fr/users/4721239152">Voir le profil Roblox</a>
+        </div>
+
+        <div class="card">
+          <h2>Discord officiel</h2>
+          <p>Serveur Discord principal pour la communauté, les annonces et les échanges.</p>
+          <a class="btn blue" href="https://discord.gg/CZ6e4Zbs">Rejoindre Discord</a>
+        </div>
+      </div>
+
+      <div class="footer-link">
+        <a href="https://lepine908.github.io">Retour au site officiel 908 Studios</a>
+      </div>
+    </div>
+  </body>
+  </html>
+
