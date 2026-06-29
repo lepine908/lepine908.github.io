@@ -1,0 +1,404 @@
+/* ==========================================================
+   908 Studios Documentation Center
+   Main Stylesheet
+   ----------------------------------------------------------
+   Version : 1.0
+   Author  : 908 Studios
+   Website : https://lepine908.github.io
+
+   Cette feuille de style est utilisée pour l'ensemble de la
+   documentation officielle de 908 Studios.
+
+   © 908 Studios
+========================================================== */
+
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root{
+
+    /* Couleurs principales */
+
+    --background:#07111F;
+    --background-light:#0E1B2E;
+    --surface:#13243D;
+    --surface-light:#1B3354;
+
+    --primary:#00CFFF;
+    --primary-hover:#44DBFF;
+
+    --secondary:#49F0C1;
+
+    --text:#F5F8FC;
+    --text-light:#C8D3E2;
+    --text-dark:#8A97A8;
+
+    --success:#36D17D;
+    --warning:#FFC145;
+    --danger:#FF6363;
+
+    /* Ombres */
+
+    --shadow-small:
+        0 4px 10px rgba(0,0,0,.20);
+
+    --shadow-medium:
+        0 10px 25px rgba(0,0,0,.30);
+
+    --shadow-large:
+        0 20px 45px rgba(0,0,0,.45);
+
+    /* Bordures */
+
+    --radius-small:8px;
+    --radius:16px;
+    --radius-large:24px;
+
+    /* Espacements */
+
+    --space-xs:6px;
+    --space-s:12px;
+    --space-m:20px;
+    --space-l:40px;
+    --space-xl:80px;
+
+    /* Animations */
+
+    --transition:.25s ease;
+
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:
+        Inter,
+        Segoe UI,
+        Roboto,
+        Arial,
+        sans-serif;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--background);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--surface-light);
+
+    border-radius:100px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--primary);
+
+}
+
+/* ==========================================================
+   LIENS
+========================================================== */
+
+a{
+
+    color:var(--primary);
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+a:hover{
+
+    color:var(--primary-hover);
+
+}
+
+/* ==========================================================
+   BARRE DE PROGRESSION
+========================================================== */
+
+#progress-bar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:0%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    z-index:9999;
+
+}
+
+/* ==========================================================
+   BARRE SUPERIEURE
+========================================================== */
+
+#topbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:500;
+
+    backdrop-filter:blur(14px);
+
+    background:rgba(7,17,31,.85);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.05);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 40px;
+
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.logo{
+
+    width:56px;
+
+    height:56px;
+
+    object-fit:contain;
+
+}
+
+.logo-container h1{
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    color:var(--text-dark);
+
+    font-size:.9rem;
+
+    margin-top:2px;
+
+}
+
+/* ==========================================================
+   BOUTONS DU HEADER
+========================================================== */
+
+.top-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.top-buttons button{
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--surface);
+
+    color:var(--text);
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.top-buttons button:hover{
+
+    background:var(--primary);
+
+    color:#000;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================================
+   STRUCTURE PRINCIPALE
+========================================================== */
+
+#layout{
+
+    display:grid;
+
+    grid-template-columns:
+
+        300px
+
+        1fr;
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+#sidebar{
+
+    position:sticky;
+
+    top:95px;
+
+    height:calc(100vh - 95px);
+
+    overflow:auto;
+
+    padding:35px;
+
+    border-right:
+
+        1px solid rgba(255,255,255,.05);
+
+    background:var(--background-light);
+
+}
+
+.sidebar-title{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+#searchBox{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    padding:14px;
+
+    margin-bottom:25px;
+
+    border-radius:var(--radius-small);
+
+    background:var(--surface);
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   SOMMAIRE
+========================================================== */
+
+#table-of-contents ul{
+
+    list-style:none;
+
+}
+
+#table-of-contents li{
+
+    margin-bottom:8px;
+
+}
+
+#table-of-contents a{
+
+    display:block;
+
+    padding:10px 14px;
+
+    border-radius:10px;
+
+    color:var(--text-light);
+
+    transition:var(--transition);
+
+}
+
+#table-of-contents a:hover{
+
+    background:var(--surface);
+
+    color:var(--primary);
+
+    transform:translateX(6px);
+
+}
