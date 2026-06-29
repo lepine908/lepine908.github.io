@@ -402,3 +402,440 @@ a:hover{
     transform:translateX(6px);
 
 }
+/* ==========================================================
+   CONTENU PRINCIPAL
+========================================================== */
+
+#content{
+
+    padding:60px;
+
+    max-width:1400px;
+
+    width:100%;
+
+    margin:0 auto;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:70px;
+
+    margin-bottom:60px;
+
+    border-radius:var(--radius-large);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0,207,255,.12),
+            rgba(73,240,193,.05)
+        ),
+        var(--surface);
+
+    box-shadow:var(--shadow-large);
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    right:-120px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:rgba(0,207,255,.08);
+
+    filter:blur(25px);
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:-80px;
+
+    bottom:-80px;
+
+    border-radius:50%;
+
+    background:rgba(73,240,193,.05);
+
+    filter:blur(30px);
+
+}
+
+.version{
+
+    display:inline-block;
+
+    background:rgba(0,207,255,.15);
+
+    color:var(--primary);
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.hero h2{
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.hero p{
+
+    max-width:850px;
+
+    color:var(--text-light);
+
+    font-size:1.1rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-top:40px;
+
+}
+
+/* ==========================================================
+   BOUTONS
+========================================================== */
+
+.primary-button,
+.secondary-button,
+.text-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+}
+
+.primary-button{
+
+    background:var(--primary);
+
+    color:#061018;
+
+    padding:15px 30px;
+
+    border-radius:999px;
+
+    box-shadow:var(--shadow-small);
+
+}
+
+.primary-button:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+}
+
+.secondary-button{
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:transparent;
+
+    color:var(--text);
+
+    padding:15px 30px;
+
+    border-radius:999px;
+
+}
+
+.secondary-button:hover{
+
+    background:var(--surface-light);
+
+    transform:translateY(-3px);
+
+}
+
+.text-button{
+
+    margin-top:25px;
+
+    color:var(--primary);
+
+}
+
+.text-button:hover{
+
+    transform:translateX(6px);
+
+}
+
+/* ==========================================================
+   SECTION STANDARD
+========================================================== */
+
+.doc-section{
+
+    margin-bottom:70px;
+
+    animation:fadeUp .7s ease;
+
+}
+
+.doc-section h2{
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+}
+
+.doc-section p{
+
+    color:var(--text-light);
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================================
+   ETIQUETTES
+========================================================== */
+
+.section-tag{
+
+    display:inline-block;
+
+    margin-bottom:15px;
+
+    padding:8px 16px;
+
+    background:rgba(73,240,193,.08);
+
+    color:var(--secondary);
+
+    border-radius:999px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   CARTE INFORMATION
+========================================================== */
+
+.information-card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius);
+
+    padding:45px;
+
+    margin-bottom:70px;
+
+    box-shadow:var(--shadow-medium);
+
+}
+
+.information-card h3{
+
+    font-size:1.6rem;
+
+    margin-bottom:20px;
+
+}
+
+.information-card p{
+
+    color:var(--text-light);
+
+}
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+
+    margin-top:35px;
+
+}
+
+.info-grid div{
+
+    background:rgba(255,255,255,.03);
+
+    padding:20px;
+
+    border-radius:var(--radius-small);
+
+    transition:var(--transition);
+
+}
+
+.info-grid div:hover{
+
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/* ==========================================================
+   MINI CARTES
+========================================================== */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.mini-card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius);
+
+    padding:28px;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow-small);
+
+}
+
+.mini-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-large);
+
+}
+
+.mini-card h3{
+
+    margin-bottom:18px;
+
+}
+
+.mini-card p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   ENCADRÉS
+========================================================== */
+
+.notice{
+
+    margin-top:35px;
+
+    padding:28px;
+
+    border-left:5px solid var(--primary);
+
+    border-radius:var(--radius-small);
+
+    background:rgba(255,255,255,.03);
+
+}
+
+.notice h3{
+
+    margin-bottom:15px;
+
+}
+
+.notice.info{
+
+    border-color:var(--primary);
+
+}
+
+.notice.success{
+
+    border-color:var(--success);
+
+}
+
+.notice.warning{
+
+    border-color:var(--warning);
+
+}
+
+.notice.danger{
+
+    border-color:var(--danger);
+
+}
