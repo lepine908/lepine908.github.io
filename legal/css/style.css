@@ -839,3 +839,249 @@ a:hover{
     border-color:var(--danger);
 
 }
+ 
+/* ==========================================================
+   LISTES (CHECK LIST)
+========================================================== */
+
+.check-list{
+
+    list-style:none;
+
+    margin-top:20px;
+
+}
+
+.check-list li{
+
+    position:relative;
+
+    padding-left:28px;
+
+    margin-bottom:12px;
+
+    color:var(--text-light);
+
+}
+
+.check-list li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    color:var(--success);
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   LISTES DE DÉFINITION (MENTIONS LÉGALES)
+========================================================== */
+
+.definition-list{
+
+    display:grid;
+
+    grid-template-columns:200px 1fr;
+
+    gap:12px 25px;
+
+    margin-top:25px;
+
+}
+
+.definition-list dt{
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.definition-list dd{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   ALIGNEMENT GÉNÉRAL DES BLOCS
+========================================================== */
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:rgba(255,255,255,.06);
+
+    margin:60px 0;
+
+}
+
+/* ==========================================================
+   PETITS EFFETS DE TEXTE
+========================================================== */
+
+strong{
+
+    color:var(--text);
+
+}
+
+code{
+
+    background:rgba(0,0,0,.3);
+
+    padding:3px 6px;
+
+    border-radius:6px;
+
+    font-size:.9rem;
+
+    color:var(--primary);
+
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Animation légère sur les sections */
+
+.doc-section{
+
+    animation:fadeUp .6s ease both;
+
+}
+
+/* ==========================================================
+   SCROLL SMOOTH + OFFSET ANCHORS
+========================================================== */
+
+:target{
+
+    scroll-margin-top:120px;
+
+}
+
+/* ==========================================================
+   RESPONSIVE TABLETTE
+========================================================== */
+
+@media (max-width: 1024px){
+
+    #layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #sidebar{
+
+        position:relative;
+
+        height:auto;
+
+        top:0;
+
+    }
+
+    #content{
+
+        padding:40px;
+
+    }
+
+    .hero{
+
+        padding:50px;
+
+    }
+
+    .hero h2{
+
+        font-size:2.3rem;
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE MOBILE
+========================================================== */
+
+@media (max-width: 600px){
+
+    #topbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        text-align:center;
+
+    }
+
+    #content{
+
+        padding:25px;
+
+    }
+
+    .hero{
+
+        padding:30px;
+
+    }
+
+    .hero h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .definition-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================================
+   FIN DU STYLE (BASE)
+========================================================== */
