@@ -1,11 +1,17 @@
-// Extension IA Simple pour TurboWarp
-// Fonctionne avec n'importe quel proxy compatible OpenAI
+// Extension IA Simple pour TurboWarp (Hugging Face Edition)
+// Aucune clé API payante requise, utilise votre token gratuit Hugging Face.
 
 (function(Scratch) {
   'use strict';
 
-  // URL du proxy par défaut (modifiable via un bloc)
-  let API_URL = 'https://api.tmrace.net/v1/chat/completions';
+  // ============================================================
+  // CONFIGURATION : COLLEZ VOTRE CLÉ HUGGING FACE CI-DESSOUS
+  // Elle doit commencer par "hf_"
+  // ============================================================
+  const MA_CLE = "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"; 
+  
+  // Modèle utilisé (Mistral 7B est rapide et gratuit)
+  const API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3";
 
   class SimpleAI {
     getInfo() {
@@ -13,18 +19,8 @@
         id: 'simpleaichat',
         name: 'Simple AI Chat',
         color1: '#4C97FF',
+        color2: '#3373CC',
         blocks: [
-          {
-            opcode: 'setApiUrl',
-            blockType: Scratch.BlockType.COMMAND,
-            text: 'définir l\'URL API [URL]',
-            arguments: {
-              URL: {
-                type: Scratch.ArgumentType.STRING,
-                defaultValue: 'https://api.tmrace.net/v1/chat/completions'
-              }
-            }
-          },
           {
             opcode: 'askAI',
             blockType: Scratch.BlockType.REPORTER,
@@ -32,30 +28,42 @@
             arguments: {
               PROMPT: {
                 type: Scratch.ArgumentType.STRING,
-                defaultValue: 'Bonjour !'
+                defaultValue: 'Bonjour, qui es-tu ?'
               }
             }
           },
           {
-            opcode: 'isWorking',
+            opcode: 'checkStatus',
             blockType: Scratch.BlockType.BOOLEAN,
-            text: 'l\'API fonctionne-t-elle ?'
+            text: 'l\'API est-elle prête ?'
           }
         ]
       };
     }
 
-    setApiUrl(args) {
-      API_URL = args.URL;
-    }
-
-    async isWorking() {
+    // Vérifie si la clé est présente et si le modèle répond
+    async checkStatus() {
+      if (MA_CLE === "hf_VOTRE_CLE_ICI" || MA_CLE === "") {
+        return false; // Clé non configurée
+      }
+      
       try {
-        // Test simple sans envoyer de gros message
+        // Test rapide avec un prompt vide ou très court
         const response = await Scratch.fetch(API_URL, {
-          method: 'OPTIONS' // Juste un test de connexion
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + MA_CLE
+          },
+          body: JSON.stringify({
+            inputs: 'test',
+            parameters: { max_new_tokens: 5 }
+          })
         });
-        return response.ok || response.status === 400; // 400 est OK car on n'envoie pas de corps
+        
+        // Si on reçoit une réponse (même une erreur de modèle chargé), c'est que la clé est bonne
+        // Le code 503 signifie "Modèle en chargement", ce qui est normal pour le gratuit
+        return response.ok || response.status === 503; 
       } catch (e) {
         return false;
       }
@@ -63,37 +71,48 @@
 
     async askAI(args) {
       const prompt = args.PROMPT;
-      
+
+      // Vérification de sécurité
+      if (MA_CLE === "hf_VOTRE_CLE_ICI" || MA_CLE === "") {
+        return "ERREUR: Vous n'avez pas mis votre clé API dans le code de l'extension !";
+      }
+
       try {
         const response = await Scratch.fetch(API_URL, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + MA_CLE
           },
           body: JSON.stringify({
-            model: 'gpt-3.5-turbo',
-            messages: [
-              { role: 'user', content: prompt }
-            ],
-            temperature: 0.7,
-            max_tokens: 150
+            inputs: prompt,
+            parameters: {
+              max_new_tokens: 200,      // Longueur max de la réponse
+              return_full_text: false,  // Ne renvoie que la réponse, pas la question
+              temperature: 0.7          // Créativité (0.0 à 1.0)
+            }
           })
         });
 
         if (!response.ok) {
-          return `Erreur: ${response.status}`;
+          const errorData = await response.text();
+          if (response.status === 503) {
+            return "Le modèle se réveille... Réessayez dans 10 secondes.";
+          }
+          return `Erreur API (${response.status}): ${errorData}`;
         }
 
         const data = await response.json();
         
-        if (data.choices && data.choices.length > 0) {
-          return data.choices[0].message.content;
+        // Hugging Face renvoie un tableau : [{ generated_text: "..." }]
+        if (Array.isArray(data) && data.length > 0 && data[0].generated_text) {
+          return data[0].generated_text.trim();
         } else {
-          return 'Réponse vide';
+          return "Réponse vide ou format inconnu.";
         }
 
       } catch (error) {
-        return 'Échec de la connexion (CORS ou API HS)';
+        return "Échec de la connexion (Vérifiez votre internet ou votre clé).";
       }
     }
   }
