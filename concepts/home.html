@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bienvenue sur 908 Studios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #34495e;
+      --accent: #3498db;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+      --text: #7f8c8d;
+      --text-light: #bdc3c7;
+    }
+
+    body {
+      background-color: var(--dark);
+      color: var(--light);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--secondary);
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo {
+      width: 15%;
+      height: auto;
+      border-radius: 8px;
+      transition: opacity 0.3s;
+    }
+    .logo:hover {
+      opacity: 0.9;
+    }
+
+    h1 {
+      color: var(--light);
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .section {
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--secondary);
+    }
+
+    .section h2 {
+      color: var(--light);
+      border-bottom: 1px solid var(--secondary);
+      padding-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      min-width: 200px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--secondary);
+      border-radius: 8px;
+      color: var(--light);
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-3px);
+    }
+    .card h3 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+
+    button {
+      background: var(--accent);
+      color: var(--dark);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin: 5px;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 25px;
+      border-top: 1px solid var(--secondary);
+      background: rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+      button {
+        width: 100%;
+        margin: 5px 0;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur le site officiel de 908 Studios</h1>
+    <img src="https://lepine908.github.io/Logo%20futuriste%20de%20908%20Studios.png" class="logo" alt="Logo de 908 Studios">
+  </header>
+
+  <div class="section">
+    <h2>Projets principaux</h2>
+    <div class="cards">
+      <a href="https://lepine908.github.io/dream-RP" class="card">
+        <h3>Dream-RP</h3>
+        <p>Notre projet phare, un univers RP unique.</p>
+      </a>
+      <a href="https://lepine908.github.io/supiano.html" class="card">
+        <h3>Supiano908</h3>
+        <p>Découvrez nos créations musicales.</p>
+      </a>
+      <a href="https://lepine908.github.io/projects.html" class="card">
+        <h3>Autres projets</h3>
+        <p>Explorez nos autres créations fantastiques.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Communauté</h2>
+    <div class="cards">
+      <a href="https://disboard.org/fr/server/1406986301219016744" class="card">
+        <h3>Discord Officiel</h3>
+        <p>Rejoignez notre communauté active.</p>
+      </a>
+      <a href="https://908studios.fandom.com/fr/wiki/Wiki_908-studios" class="card">
+        <h3>Wiki 908 Studios</h3>
+        <p>Documentation complète sur nos projets.</p>
+      </a>
+      <a href="https://scratch.mit.edu/projects/1299565968" class="card">
+        <h3>Forums 908</h3>
+        <p>Discutez avec la communauté.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Ressources</h2>
+    <div class="cards">
+      <a href="https://github.com/lepine908/908-studios-public" class="card">
+        <h3>GitHub</h3>
+        <p>Téléchargez nos projets open source.</p>
+      </a>
+      <a href="https://lepine908.github.io/blog" class="card">
+        <h3>Blogs et Documentation</h3>
+        <p>Suivez nos actualités et tutoriels.</p>
+      </a>
+      <a href="https://lepine908.github.io/members.html" class="card">
+        <h3>Équipe</h3>
+        <p>Contactez nos développeurs.</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Support</h2>
+    <div class="cards">
+      <a href="https://lepine908.github.io/contact.html" class="card">
+        <h3>Contact</h3>
+        <p>Besoin d'aide ? Contactez-nous.</p>
+      </a>
+      <a href="https://lepine908.github.io/legal/index.html" class="card">
+        <h3>Mentions légales</h3>
+        <p>Informations juridiques et confidentialité.</p>
+      </a>
+      <a href="https://lepine908.github.io/a.html" class="card">
+        <h3>Accès privé</h3>
+        <p>Accès réservé aux membres.</p>
+      </a>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin: 30px 0;">
+    <a href="https://lepine908.github.io/my-account.html">
+      <button>Se connecter ou créer un compte</button>
+    </a>
+  </div>
+
+  <footer>
+    <h3 style="color: var(--light);">Liens utiles</h3>
+    <div class="footer-links">
+      <a href="https://lepine908.github.io/paroles.html">Paroles 908</a>
+      <a href="https://lepine908.github.io/Maths/Maths.html">Exercices de Maths</a>
+      <a href="https://devglobe.app/projects/908-studios-s-website?utm_source=badge&utm_medium=embed" target="_blank">
+        <img src="https://devglobe.app/badges/launched-on-devglobe-dark.svg" alt="Launched on DevGlobe" width="250" height="54" />
+      </a>
+    </div>
+    <p style="color: var(--text-light); margin-top: 20px;">DERNIÈRES NOUVELLES 908 : À venir !</p>
+  </footer>
+</body>
+</html>
