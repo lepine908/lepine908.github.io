@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>908 Studios - Accueil BY Shadow157</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #34495e;
+      --accent: #3498db;
+      --light: #ecf0f1;
+      --dark: #2c3e50;
+      --text: #7f8c8d;
+      --highlight: #2980b9;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: var(--primary);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px;
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://picsum.photos/id/10/1920/1080?blur=2') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    .logo {
+      height: 60px;
+      border-radius: 4px;
+      border: 1px solid #e0e0e0;
+    }
+
+    h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .header-buttons button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .header-buttons button:hover {
+      background: var(--highlight);
+    }
+
+    .section {
+      margin: 30px 20px;
+      padding: 25px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-attachment: fixed;
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    /* Fond différent pour chaque section */
+    .section:nth-child(2)::before { background: url('https://picsum.photos/id/11/1920/1080?blur=2') no-repeat center center; }
+    .section:nth-child(3)::before { background: url('https://picsum.photos/id/12/1920/1080?blur=2') no-repeat center center; }
+    .section:nth-child(4)::before { background: url('https://picsum.photos/id/13/1920/1080?blur=2') no-repeat center center; }
+    .section:nth-child(5)::before { background: url('https://picsum.photos/id/14/1920/1080?blur=2') no-repeat center center; }
+
+    .section h2 {
+      color: var(--primary);
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 12px;
+      font-size: 1.5rem;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      flex: 1 1 220px;
+      min-width: 220px;
+      padding: 20px;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-3px);
+    }
+    .card h3 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+    .card p {
+      color: var(--text);
+    }
+    .card i {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    /* Mise en avant du Discord et Scratch */
+    .card.discord, .card.scratch {
+      border: 2px solid var(--accent);
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin: 10px 0;
+      width: 100%;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: var(--highlight);
+    }
+
+    footer {
+      margin: 50px 20px 20px;
+      padding: 25px;
+      background: white;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://picsum.photos/id/15/1920/1080?blur=2') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 15px 0;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 15px 0;
+    }
+    .social-icons a {
+      color: var(--text);
+      font-size: 1.3rem;
+      transition: color 0.2s;
+    }
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+
+    .footer-credit {
+      margin-top: 15px;
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header-buttons {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;">
+      <img src="https://lepine908.github.io/Logo%20futuriste%20de%20908%20Studios.png" class="logo" alt="Logo de 908 Studios">
+      <h1>908 Studios - Accueil BY Shadow157</h1>
+    </div>
+    <div class="header-buttons">
+      <button onclick="window.location.href='https://lepine908.github.io/contact.html'"><i class="fas fa-question-circle"></i> Aide</button>
+      <button onclick="window.location.href='https://lepine908.github.io/my-account.html'"><i class="fas fa-user"></i> Compte</button>
+    </div>
+  </header>
+
+  <div class="section">
+    <h2><i class="fas fa-star"></i> Projets principaux</h2>
+    <div class="cards">
+      <a href="https://lepine908.github.io/dream-RP" class="card">
+        <i class="fas fa-gamepad"></i>
+        <h3>Dream-RP</h3>
+        <p>Notre projet phare, un univers RP unique.</p>
+        <button>Découvrir</button>
+      </a>
+      <a href="https://lepine908.github.io/supiano.html" class="card">
+        <i class="fas fa-music"></i>
+        <h3>Supiano908</h3>
+        <p>Découvrez nos créations musicales.</p>
+        <button>Écouter</button>
+      </a>
+      <a href="https://lepine908.github.io/projects.html" class="card">
+        <i class="fas fa-folder-open"></i>
+        <h3>Autres projets</h3>
+        <p>Explorez nos autres créations.</p>
+        <button>Voir plus</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><i class="fas fa-users"></i> Communauté</h2>
+    <div class="cards">
+      <a href="https://disboard.org/fr/server/1406986301219016744" class="card discord">
+        <i class="fab fa-discord"></i>
+        <h3>Discord Officiel</h3>
+        <p>Rejoignez notre communauté active.</p>
+        <button>Rejoindre</button>
+      </a>
+      <a href="https://908studios.fandom.com/fr/wiki/Wiki_908-studios" class="card">
+        <i class="fas fa-book"></i>
+        <h3>Wiki 908 Studios</h3>
+        <p>Documentation complète sur nos projets.</p>
+        <button>Consulter</button>
+      </a>
+      <a href="https://scratch.mit.edu/projects/1299565968" class="card scratch">
+        <i class="fas fa-code"></i>
+        <h3>Projets Scratch</h3>
+        <p>Découvrez nos projets interactifs.</p>
+        <button>Voir sur Scratch</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><i class="fas fa-tools"></i> Ressources</h2>
+    <div class="cards">
+      <a href="https://github.com/lepine908/908-studios-public" class="card">
+        <i class="fab fa-github"></i>
+        <h3>GitHub</h3>
+        <p>Téléchargez nos projets open source.</p>
+        <button>Visiter</button>
+      </a>
+      <a href="https://lepine908.github.io/blog" class="card">
+        <i class="fas fa-blog"></i>
+        <h3>Blogs et Documentation</h3>
+        <p>Suivez nos actualités et tutoriels.</p>
+        <button>Lire</button>
+      </a>
+      <a href="https://lepine908.github.io/members.html" class="card">
+        <i class="fas fa-users-cog"></i>
+        <h3>Liste des devs 908</h3>
+        <p>Découvrez l'équipe derrière 908 Studios.</p>
+        <button>Voir la liste</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><i class="fas fa-headset"></i> Support</h2>
+    <div class="cards">
+      <a href="https://lepine908.github.io/contact.html" class="card">
+        <i class="fas fa-envelope"></i>
+        <h3>Contact</h3>
+        <p>Besoin d'aide ? Contactez-nous.</p>
+        <button>Contacter</button>
+      </a>
+      <a href="https://lepine908.github.io/legal/index.html" class="card">
+        <i class="fas fa-file-contract"></i>
+        <h3>Mentions légales</h3>
+        <p>Informations juridiques et confidentialité.</p>
+        <button>Lire</button>
+      </a>
+      <a href="https://lepine908.github.io/a.html" class="card">
+        <i class="fas fa-lock"></i>
+        <h3>Accès privé</h3>
+        <p>Accès réservé aux membres.</p>
+        <button>Se connecter</button>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <h3><i class="fas fa-link"></i> Liens utiles</h3>
+    <div class="social-icons">
+      <a href="https://disboard.org/fr/server/1406986301219016744" target="_blank"><i class="fab fa-discord"></i></a>
+      <a href="https://scratch.mit.edu/users/Shadow157/" target="_blank"><i class="fas fa-code"></i></a>
+      <a href="https://github.com/lepine908" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="https://lepine908.github.io/paroles.html">Paroles 908</a>
+      <a href="https://lepine908.github.io/Maths/Maths.html">Exercices de Maths</a>
+      <a href="https://devglobe.app/projects/908-studios-s-website?utm_source=badge&utm_medium=embed" target="_blank">
+        <img src="https://devglobe.app/badges/launched-on-devglobe-dark.svg" alt="Launched on DevGlobe" width="200" height="44" />
+      </a>
+    </div>
+    <p class="footer-credit">Site conçu par <strong>Shadow157</strong>, membre de 908 Studios.</p>
+    <p><i class="fas fa-newspaper"></i> DERNIÈRES NOUVELLES 908 : À venir !</p>
+  </footer>
+</body>
+</html>
