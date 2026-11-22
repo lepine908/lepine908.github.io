@@ -8,3 +8,190 @@ C'est notre plus grand projet. Il s'agit d'une application Linux qui permet de c
 <a href = "https://lepine908.github.io/908_accounts_terminal" download><button style = "color:grey">Télécharger le gestionnaire de compte 908 Linux terminal exécutable</button></a><br>
 <a href = "https://github.com/lepine908/908-studios-public"><button>Télécharger certains de nos projets téléchargeables</button></a><br>
 <a href = "https://github.com/lepine908/908-studios-public/releases/tag/908-accounts-exe"><button>Télécharger my account exe version</button></a><br>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects - 908 Studios</title>
+  <style>
+    :root {
+      --bg-page: #0f1115;
+      --bg-card: #181b21;
+      --bg-card-hover: #20242c;
+      --text-main: #ffffff;
+      --text-muted: #9ca3af;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --border-color: #2a2f3a;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 2.5rem 0 1.25rem 0;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
+    }
+
+    /* Grille de cartes */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Style général d'une card 908 */
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: var(--bg-card-hover);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      border-color: var(--accent);
+    }
+
+    /* Mise en valeur spéciale pour MEGAEXPO-ENGINE */
+    .card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(145deg, #1b2232 0%, #181b21 100%);
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: rgba(59, 130, 246, 0.2);
+      color: #60a5fa;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      align-self: flex-start;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      margin: 0 0 0.6rem 0;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0 0 1.5rem 0;
+      flex-grow: 1;
+    }
+
+    /* Boutons */
+    .card-btn {
+      display: inline-block;
+      text-align: center;
+      background-color: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.65rem 1.2rem;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, opacity 0.2s ease;
+      align-self: flex-start;
+    }
+
+    .card-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Variantes de couleurs pour conserver vos codes couleurs */
+    .btn-green { background-color: #16a34a; }
+    .btn-orange { background-color: #ea580c; }
+    .btn-grey { background-color: #4b5563; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>908 Studios - Projets</h1>
+    <p style="color: var(--text-muted);">Voici nos principaux projets et outils développés par l'équipe :</p>
+
+    <h2>À la une</h2>
+    <div class="cards-grid">
+      <!-- NOUVELLE CARD MEGAEXPO-ENGINE -->
+      <article class="card featured">
+        <span class="badge">Nouveau • Moteur</span>
+        <h3>MEGAEXPO-ENGINE</h3>
+        <p>Un moteur Turbowarp puissant pour créer des exposés de rêve avec l'aide de nos devs.</p>
+        <a href="https://lepine908.github.io/MEE" class="card-btn">Découvrir MEGAEXPO-ENGINE</a>
+      </article>
+    </div>
+
+    <h2>Tous nos projets</h2>
+    <div class="cards-grid">
+
+      <article class="card">
+        <h3>MégaExposé Cyclones</h3>
+        <p>C'est un projet Scratch développé en collaboration avec Nokodraj qui est un exposé sur les cyclones.</p>
+        <a href="https://github.com/lepine908/expo-cyclones-on-scratch-by-lepko25" class="card-btn btn-green">Télécharger MégaExposé Cyclones</a>
+      </article>
+
+      <article class="card">
+        <h3>Paroles 908</h3>
+        <p>C'est notre plus grand projet. Il s'agit d'une application Linux qui permet de connaître les paroles de beaucoup de chansons.</p>
+        <a href="https://lepine908.github.io/paroles.html" class="card-btn">Télécharger Paroles 908</a>
+      </article>
+
+      <article class="card">
+        <h3>Studio Scratch 908</h3>
+        <p>Retrouvez l'ensemble de nos créations, jeux et animations interactives directement sur notre studio officiel.</p>
+        <a href="https://scratch.mit.edu/studios/51138291" class="card-btn btn-orange">Tous nos projets Scratch !</a>
+      </article>
+
+      <article class="card">
+        <h3>Gestionnaire de compte 908 (Terminal)</h3>
+        <p>Exécutable Linux en ligne de commande pour gérer votre compte 908 directement depuis le terminal.</p>
+        <a href="https://lepine908.github.io/908_accounts_terminal" download class="card-btn btn-grey">Télécharger (Linux Terminal)</a>
+      </article>
+
+      <article class="card">
+        <h3>Dépôt Public 908 Studios</h3>
+        <p>Accédez au dépôt GitHub regroupant les fichiers sources et releases de certains de nos projets téléchargeables.</p>
+        <a href="https://github.com/lepine908/908-studios-public" class="card-btn">Voir les projets téléchargeables</a>
+      </article>
+
+      <article class="card">
+        <h3>My Account (Version Exécutable)</h3>
+        <p>Accédez à l'interface de gestion de votre compte 908 dans une version exécutable dédiée.</p>
+        <a href="https://github.com/lepine908/908-studios-public/releases/tag/908-accounts-exe" class="card-btn">Télécharger my account exe</a>
+      </article>
+
+    </div>
+  </div>
+
+</body>
+</html>
